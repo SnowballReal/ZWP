@@ -1,0 +1,74 @@
+body {
+    background-image: url(skyboxes_4.png);
+}
+
+.body {
+    background-image:linear-gradient(0deg, rgb(37, 37, 37), rgb(107, 107, 107));
+    margin: 10%;
+    margin-top: 2%;
+    width: 80%;
+    height: 900px;
+    border-radius: 20px;
+}
+
+.button {
+    float: left;
+    background-image:linear-gradient(0deg, rgb(209, 209, 209), white);
+    box-shadow: 0px 2px 5px black;
+    text-align: center;
+    height:100%;
+    width: auto;
+    margin-left:5px;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius: 13px;
+}
+
+.button:active{
+    box-shadow: inset 0px 2px 5px black;
+}
+
+
+header {
+    width: 100%;
+    height:70px;
+    text-align: center;
+    font-family: sans-serif;
+    background-image:linear-gradient(0deg, rgb(209, 209, 209), white);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+            
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li:hover {
+            color: #007bff;
+            font-weight: bold;
+        }

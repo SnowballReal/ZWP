@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css"></rel>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#container").css("background-color","grey")
+        })
+        $(function(){
+            console.log("page be workin'");
+            $('[href="#"]').attr("href","https://en.uncyclopedia.co/wiki/Burger_King");
+            $("#minecraft").attr("style","font-weight:bold");
+            $("li").eq(3).css("background-color","grey")
+            $("li").not("#pierwszy").css("background-color", "beige")
+            $("a").odd().css("color","white").css("background-color", "black")
+            
+        })
+    </script>
+</head>
+<body>
+    <div class="body">
+        <header>
+            <div class="button">
+                <h2>home</h2>
+            </div>
+            <div class="button">
+                <h2>not home</h2>
+            </div>
+            <div class="button">
+                <h2>maybe home</h2>
+            </div>
+            <h1>Piwo</h1>
+        </header>
+        <h1>Lista Gier Komputerowych</h1>
+        <div class="container">
+            <ul>
+                <li id="pierwszy"><a href="#">The Witcher 3: Wild Hunt</a></li>
+                <li><a href="#">Cyberpunk 2077</a></li>
+                <li><a href="#">Elden Ring</a></li>
+                <li><a href="#">Baldur's Gate 3</a></li>
+                <li><a href="#">Starfield</a></li>
+                <li><a href="#">Hollow Knight</a></li>
+                <li><a href="#" id="minecraft">Minecraft</a></li>
+                <li><a href="#">Portal 2</a></li>
+                <li><a href="#">The Legend of Zelda: Breath of the Wild</a></li>
+                <li><a href="#">Dark Souls III</a></li>
+                <li><a href="#">Valorant</a></li>
+                <li><a href="#">Counter-Strike 2</a></li>
+            </ul>
+        </div>
+ 
+    
+    </div>
+</body>
+</html>
