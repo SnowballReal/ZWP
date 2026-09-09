@@ -43,9 +43,15 @@ header {
 
 .container {
     font-family: Arial, sans-serif;
-    max-width: 90%;
+    max-width: 60%;
     margin: 50px auto;
     padding: 20px;
+    float: left;
+}
+
+aside {
+    float: right;
+    margin: 50px auto;
 }
 
             

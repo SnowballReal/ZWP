@@ -17,8 +17,10 @@
             $("li").eq(3).css("background-color","grey")
             $("li").not("#pierwszy").css("background-color", "beige")
             $("a").odd().css("color","white").css("background-color", "black")
-            
-        })
+            console.log($('li').eq(0).text())
+            $("ul").prepend("<li>"+ "<a href='https://store.steampowered.com/app/3191050/BRAZILIAN_DRUG_DEALER_3_I_OPENED_A_PORTAL_TO_HELL_IN_THE_FAVELA_TRYING_TO_REVIVE_MIT_AIA_I_NEED_TO_CLOSE_IT'/>" +"BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT" + "</a>" +"</li>")
+            $("a").attr("target","blank")
+        })  
     </script>
 </head>
 <body>
@@ -52,6 +54,9 @@
                 <li><a href="#">Counter-Strike 2</a></li>
             </ul>
         </div>
+        <aside>
+            <img src="foot-letuce.png" >
+        </aside>
  
     
     </div>
