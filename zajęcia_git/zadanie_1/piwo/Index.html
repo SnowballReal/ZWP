@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Zdarzenie click</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+        $("button").click(function(){
+            $("#komunikat").text("hej")
+            $("#kwadrat").css("background-color","red")
+        })
+    })
+  </script>
+  <link rel="stylesheet" href="piwo.css" >
 </head>
 <body>
-    
+  <button id="przywitaj">Przywitaj się</button>
+  <p id="komunikat"></p>
+ 
+  <div id="kwadrat"></div>
+ 
+  <script>
+    $(function() {
+      // tutaj piszesz swój kod
+    });
+  </script>
 </body>
 </html>
