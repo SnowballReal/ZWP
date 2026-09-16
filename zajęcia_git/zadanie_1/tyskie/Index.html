@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            
+            console.log("page be workin'");
+            $("a").eq(1).addClass("another_link")
+            $("a").eq(2).removeClass("link")
+            $("#p").addClass("coolclass1").addClass("coolclass2")
+            $("#p").click(function(){
+                $("p").removeClass("coolclass1").removeClass("coolclass2")
+                alert("die")
+            })
+        })
+    </script>
+    
 </head>
 <body>
-    
+    <h1>Lista Gier Komputerowych</h1>
+ 
+    <ul>
+        <li><a> Minecraft</a></li>
+        <li><a> Portal 2</a></li>
+        <li><a>The Legend of Zelda: Breath of the Wild</a></li>
+        <li><a class="another_link">Counter-Strike 2</a></li>
+        <li><a href='https://store.steampowered.com/app/3191050/BRAZILIAN_DRUG_DEALER_3_I_OPENED_A_PORTAL_TO_HELL_IN_THE_FAVELA_TRYING_TO_REVIVE_MIT_AIA_I_NEED_TO_CLOSE_IT'/>BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT</a></li>
+        
+    </ul>
+    <p id="p">doin' yo mom</p>
 </body>
 </html>
