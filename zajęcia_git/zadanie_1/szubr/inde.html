@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8-BOM">
     <meta name="viewport" cogitntent="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            console.log("ball")
+            $('[id = naKoniec]').click(function(){
+                let produkt = $("#produkt").val()
+                $("#lista").append("<li >" +  produkt +"</li>")
+                $("li").first().css("color","blue")
+            })
+            $('[id = naPoczatek]').click(function(){
+                let produkt = $("#produkt").val()
+                $("#lista").prepend("<li>" +  produkt +"</li>")
+                $("li").last().css("color","green")
+            })
+            $("#accept").change(function(){
+                if(this.checked){
+                    $("#send").removeAttr('disabled')
+                }else {
+                    $("#send").attr('disabled','disabled')
+                }
+            })
+
+        })
+    </script>
 </head>
 <body>
-    die die
+    <ul id="lista">
+  <li>Chleb</li>
+  <li>Mleko</li>
+</ul>
+<input type="text" id="produkt" placeholder="Nazwa produktu">
+<button id="naKoniec">Dodaj na koniec</button>
+<button id="naPoczatek">Dodaj na początek</button>
+<input type="checkbox" id="accept">
+<label for="accept">akcepetuejsz?</label>
+<button id="send" disabled = "disabled">wyslij</button>
 </body>
 </html>
