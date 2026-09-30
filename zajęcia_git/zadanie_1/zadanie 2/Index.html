@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            
+            var sumaCen = 0
+
+            $("li").each(function(index, element){
+                var cena = $(this).data("cena")
+                //console.log(index + " : " + element.innerText)
+                console.log(index + " : " + $(this).text() + " | cena : " + $(this).data("cena"))
+                sumaCen += cena
+                if (cena > 20){
+                    $(this).addClass("drogie")
+                }
+            })
+
+            $('#suma').text("suma wszystkich : " + sumaCen)
+        })
+    </script>
+    
+</head>
+<body>
+    <ul>
+        <li id="1" data-cena="190"><a href="#">The Witcher 3: Wild Hunt</a></li>
+        <li id="2" data-cena="250"><a href="#">Cyberpunk 2077</a></li>
+        <li id="3" data-cena="200"><a href="#">Elden Ring</a></li>
+        <li id="4" data-cena="90"><a href="#">Skyrim</a></li>
+    </ul>
+
+    <ul id="lista">
+        <li data-cena="10">piwo</li>
+        <li data-cena="100">koks</li>
+        <li data-cena="20">szlugi</li>
+        <li data-cena="10">majonez kielecki</li>
+    </ul>
+    <p id="suma"></p>
+</body>
+</html>
