@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            function procentage(part, whole){
+                var procentage = part / whole * 100
+                return procentage
+            }
+
+            $(document).on("keypress keyup keydown", function(event){
+                $("#eventType").text(event.type)
+            })
+
+            var pageHeight = $(document).height()
+            var pageWidth = $(document).width()
+                console.log(pageHeight)
+            $(document).on("mousemove", function(event){
+                
+                $("#pageX").text(event.pageX)
+                $("#pageY").text(event.pageY)
+                $("img").css("margin-left", event.pageX)
+                $("img").css("margin-top", event.pageY)
+                $("#colorbox").css("background-color", function(){
+                    var hue = event.pageX / pageWidth * 100
+                    var saturation = 100
+                    var lightness = 100
+                    return "hsl(" + hue+ "%," + saturation +"%," +  lightness + "%)";
+                })
+            })
+            
+        })
+    </script>
+    
+</head>
+<body>
+    <img src="130829390.png" style="position: absolute;">
+    <br>
+    <div class="colorbox" id="colorbox">
+
+    </div>
+    <input type="text" id="pole">
+
+    <p>
+        typ zdarzenia : 
+        <span id="eventType">---</span>
+    </p>
+
+    <p>
+        pozycja myszy : 
+        X :<span id="pageX">---</span>
+        Y :<span id="pageY">---</span>
+    </p>
+</body>
+</html>
