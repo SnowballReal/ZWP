@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            var catHidden = false
+            $("#hide").click(function(){
+                /*if(catHidden == false){
+                    $("#kot").slideUp(2000)
+                    catHidden = true
+                }else {
+                    $("#kot").slideDown(2000)
+                    catHidden = false
+                }*/
+
+                $("#kot").slideToggle(200)
+            })
+
+
+        })
+    </script>
+    
+</head>
+<body>
+    <img id="kot" src="130829390.png">
+    <br>
+    <button id="hide">hide</button>
+    <p hidden="true" id="komunikat">spuer sekretny komunitak</p>
+</body>
+</html>
