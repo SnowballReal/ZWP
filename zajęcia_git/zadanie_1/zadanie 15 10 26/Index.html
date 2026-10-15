@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            
+
+
+            $("#formularz").submit(function(e){
+            e.preventDefault()
+            var nick_good = false
+            var email_good = false
+            var pass_good = false
+            if($("#nick").val() === ""){
+                $("#info").text("podaj nick skurwysynie")
+                nick_good = false
+            }else {
+                nick_good = true
+            }
+            
+            if (isEmail($("#email").val()) == false) {
+                $("#info").text("podaj email skurwysynie")
+                email_good = false
+            }else {
+                email_good = true
+            }
+            
+            if ($("#password").val().length < 6) {
+                $("#info").text("hasło jest za krótkie")
+                $("#info").css("color","red")
+                pass_good = false
+            }else{
+                pass_good = true
+            }
+            
+            if (nick_good == true && email_good == true && pass_good == true){
+                $("#info").text("witaj, "+ $("#nick").val() + ", ty jebany skurwysunie")
+            }
+
+            $("#kolor").change(function(){
+                $("body").css("background-color",  $("#kolor").val() )
+            })
+
+            })
+        })
+
+        function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+            }
+    </script>
+    
+</head>
+<body>
+    <form id="formularz">
+        <input type="text" id="nick">
+        <input type="email" id="email">
+        <input type="password" id="password">
+        <select id="kolor">
+            <option value="white">biały</option>
+            <option value="yellow">żółty</option>
+            <option value="lightblue">niebieski</option>
+        </select>
+        <button type="submit">ślij</button>
+    </form>
+    <p id="info"></p>
+</body>
+</html>

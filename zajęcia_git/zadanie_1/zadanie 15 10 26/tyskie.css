@@ -1,0 +1,10 @@
+button {
+    background-image: linear-gradient(0deg,rgb(148, 153, 161) 44%, rgb(187, 190, 197) 50%, rgb(238, 238, 238) 56%);;
+    border-radius: 8px;
+    width: 80px;
+    height: 40px;
+    color: rgb(80, 80, 80);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.719);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.507);
+    position: absolute;
+}
