@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <link rel="stylesheet" href="tyskie.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#sprawdź").click(function(){
+
+                let name = $("#imie").val().trim()
+                
+                if(name === ""){
+                    $("#info").text("zabij sie")
+                }else {
+                    $("#info").text("nie zabij sie " + name)
+                }
+            })
+
+            $("#form").submit(function(e){
+                e.preventDefault()
+                let name = $("#nazwisko").val().trim()
+                
+                if(name === ""){
+                    $("#info2").text("zabij sie")
+                }else {
+                    $("#info2").text("nie zabij sie " + name)
+                }
+            })
+
+            $("#judgement").click(function(){
+
+                let ocena = $("#ocena").val().trim()
+                let ocenINT = parseInt(ocena)
+
+                if (ocenINT > 6) {
+                    $("#info3").text("nuh uh")
+                }else {
+                    $("#info3").text("pierwszaczek otrzymał ocenę " + ocena)
+                }
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <input type="text" id="imie"> <label>imie</label>
+    <br>
+    <button id="sprawdź">submit</button>
+    <p id="info"></p>
+    <hr>
+    <form id="form" method="get">
+        <label>nazwisko</label>
+        <br>
+        <input id="nazwisko" type="nazwisko">
+        <br>
+        <input type="submit" id="submit" value="wyślij">
+        <p id="info2"></p>
+
+    </form>
+
+    <hr>
+
+    <input type="text" id="ocena">
+    <button id="judgement">zkaż peirwszaczna na przemoc domową</button>
+    <p id="info3"></p>
+</body>
+</html>
